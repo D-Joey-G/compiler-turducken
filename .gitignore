@@ -1,0 +1,46 @@
+# ---- OS / editor ----
+.DS_Store
+*-pastedcontent-*.txt
+.idea/
+.vscode/
+*.swp
+
+# ---- Go ----
+go2rust
+/bin/
+*.test
+
+# ---- Rust ----
+target/
+**/target/
+Cargo.lock.orig
+
+# ---- JVM ----
+*.class
+*.jar
+!vendor/**/*.jar
+*.hprof
+hs_err_pid*
+replay_pid*
+
+# ---- Node (Doppio / GraalJS leg) ----
+node_modules/
+npm-debug.log*
+
+# ---- Big binary blobs we fetch, never commit ----
+/vendor/*/
+!/vendor/.gitkeep
+*.img
+*.ext2
+*.rootfs
+*.tar.gz
+*.tar.xz
+*.zip
+# fetched runtimes and images, never source
+/stage1-jvm/lib/
+/stage1-jvm/runtime/
+
+# ---- Generated artifacts ----
+/out/
+/build/
+*.wasm
